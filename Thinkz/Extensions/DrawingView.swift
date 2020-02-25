@@ -26,7 +26,7 @@ class DrawingView:UIView{
     private var color:CGColor = CGColor(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1)
     private var width:CGFloat = 1.0
     private var lastKnownPosition:CGPoint = CGPoint(x: 0, y: 0)
-    private var coordinates = Array<movement>()
+    internal var coordinates = Array<movement>()
     internal var typeOfInput:TypeOfInput = .SmartPen
     
     var lineColor:CGColor{
@@ -58,7 +58,6 @@ class DrawingView:UIView{
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        context = UIGraphicsGetCurrentContext()
         drawImage()
     }
     
@@ -72,10 +71,21 @@ extension DrawingView{
         let move = movement(start: lastKnownPosition,
                             end: CGPoint(x: x, y: y))
         coordinates.append(move)
+        
         print(">>> ADDED NEW COORDINATES BY \(typeOfInput),\n LINE: x: \(lastKnownPosition.x)\t y: \(lastKnownPosition.y) =>\n LINE: x: \(x)\t y: \(y)")
         
         lastKnownPosition = CGPoint(x: x,
                                     y: y)
+        setNeedsDisplay()
+    }
+    
+    func addNewCoordinatesWithBothValues(startX:Double,startY:Double,endX:Double,endY:Double){
+        let move = movement(start: CGPoint(x: startX, y: startY),
+                            end: CGPoint(x: endX, y: endY))
+        coordinates.append(move)
+        
+        print(">>> ADDED NEW COORDINATES BY \(typeOfInput),\n LINE: x: \(startX)\t y: \(startY) =>\n LINE: x: \(endX)\t y: \(endY)")
+        
         setNeedsDisplay()
     }
     
@@ -117,13 +127,16 @@ private extension DrawingView{
         var isInitialMove = true
     
         coordinates.forEach { (move) in
+
             if !isInitialMove{
+                context = UIGraphicsGetCurrentContext()
                 drawLine(in: context!,
                          pointA: move.start,
                          pointB: move.end,
                          color: color,
                          width: width)
-            } else {
+                UIGraphicsEndImageContext()
+            } else{
                 isInitialMove = false
             }
         }

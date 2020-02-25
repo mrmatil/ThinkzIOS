@@ -19,9 +19,11 @@ extension DrawingView{
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if typeOfInput == .Touch{
             touches.forEach { (touch) in
-                let x = Double(touch.location(in: self).x)
-                let y = Double(touch.location(in: self).y)
-                addNewCoordinates(x: x, y: y)
+                let x = Double(touch.previousLocation(in: self).x)
+                let y = Double(touch.previousLocation(in: self).y)
+                let endX = Double(touch.location(in: self).x)
+                let endY = Double(touch.location(in: self).y)
+                addNewCoordinatesWithBothValues(startX: x, startY: y, endX: endX, endY: endY)
             }
         }
     }
