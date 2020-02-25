@@ -20,6 +20,20 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func clearBtnTapped(_ sender: UIButton) {
+        drawingView.deleteCurrentCoordinates()
+    }
+    
+    @IBAction func typeOfInputSegmentedControlValueChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0: drawingView.changeInputType = .SmartPen
+        case 1: drawingView.changeInputType = .ApplePencil
+        case 2: drawingView.changeInputType = .Touch
+        default: return
+        }
+    }
+    
+    
     var temp:Double = 10
     @IBAction func testBtnTapped(_ sender: UIButton) {
         let width = Double(drawingView.frame.width)

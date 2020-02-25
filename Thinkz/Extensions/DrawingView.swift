@@ -27,7 +27,7 @@ class DrawingView:UIView{
     private var width:CGFloat = 1.0
     private var lastKnownPosition:CGPoint = CGPoint(x: 0, y: 0)
     private var coordinates = Array<movement>()
-    private var typeOfInput:TypeOfInput = .SmartPen
+    internal var typeOfInput:TypeOfInput = .SmartPen
     
     var lineColor:CGColor{
         get{
@@ -42,6 +42,16 @@ class DrawingView:UIView{
     var getCoordinates:[movement]{
         get{
             return coordinates
+        }
+    }
+    
+    var changeInputType:TypeOfInput{
+        get{
+            return typeOfInput
+        }
+        set{
+            typeOfInput = newValue
+            print(">>> INPUT TYPE CHANGED TO :\(typeOfInput)")
         }
     }
     
@@ -62,7 +72,7 @@ extension DrawingView{
         let move = movement(start: lastKnownPosition,
                             end: CGPoint(x: x, y: y))
         coordinates.append(move)
-        print(">>> ADDED NEW COORDINATES BY \(typeOfInput), LINE: x: \(lastKnownPosition.x) y: \(lastKnownPosition.y) => x: \(x) y: \(y)")
+        print(">>> ADDED NEW COORDINATES BY \(typeOfInput),\n LINE: x: \(lastKnownPosition.x)\t y: \(lastKnownPosition.y) =>\n LINE: x: \(x)\t y: \(y)")
         
         lastKnownPosition = CGPoint(x: x,
                                     y: y)
@@ -72,6 +82,8 @@ extension DrawingView{
     func deleteCurrentCoordinates(){
         lastKnownPosition = CGPoint(x: 0, y: 0)
         coordinates = Array<movement>()
+        setNeedsDisplay()
+        print(">>> CLEARED CURRENT COORDINATES")
     }
     
     func changeSmartPenValuesToAppValues(x:Double,y:Double, viewWidth:Double, viewHeight:Double)->(Double,Double){

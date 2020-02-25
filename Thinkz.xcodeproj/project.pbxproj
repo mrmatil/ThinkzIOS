@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07810FFE5DF5918E29F4A1E9 /* Pods_Thinkz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1FB6FAFEAF9586AA24D4F2 /* Pods_Thinkz.framework */; };
 		230C465F2405907A0029EB2B /* SmartPenConstants .swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C465E2405907A0029EB2B /* SmartPenConstants .swift */; };
+		230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C466024059BE20029EB2B /* DrawingView+Touch.swift */; };
 		232192192405706A00DF62A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232192182405706A00DF62A7 /* MainViewController.swift */; };
 		2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321921A2405729A00DF62A7 /* DrawingView.swift */; };
 		236D5113240459B60098611E /* TestDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D5112240459B60098611E /* TestDataViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		230C465E2405907A0029EB2B /* SmartPenConstants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmartPenConstants .swift"; sourceTree = "<group>"; };
+		230C466024059BE20029EB2B /* DrawingView+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingView+Touch.swift"; sourceTree = "<group>"; };
 		232192182405706A00DF62A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2321921A2405729A00DF62A7 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		236D5112240459B60098611E /* TestDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2321921A2405729A00DF62A7 /* DrawingView.swift */,
+				230C466024059BE20029EB2B /* DrawingView+Touch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				23964C712404615200DE7450 /* segueysNames.swift in Sources */,
 				236D511524045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift in Sources */,
 				2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */,
+				230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */,
 				236D5113240459B60098611E /* TestDataViewController.swift in Sources */,
 				23C71327240326FC00B8627F /* InitialViewController.swift in Sources */,
 				23C71323240326FC00B8627F /* AppDelegate.swift in Sources */,
