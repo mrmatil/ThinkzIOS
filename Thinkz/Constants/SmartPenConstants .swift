@@ -10,7 +10,7 @@ import UIKit
 
 class SmartPenConstants{
     
-    static let maxWidth:CGFloat  = 890.0
-    static let maxHeight:CGFloat = 890.0
+    static let maxWidth:CGFloat  = 860.0
+    static let maxHeight:CGFloat = 860.0
     
 }

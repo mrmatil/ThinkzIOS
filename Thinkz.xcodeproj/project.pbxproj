@@ -10,8 +10,11 @@
 		07810FFE5DF5918E29F4A1E9 /* Pods_Thinkz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1FB6FAFEAF9586AA24D4F2 /* Pods_Thinkz.framework */; };
 		230C465F2405907A0029EB2B /* SmartPenConstants .swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C465E2405907A0029EB2B /* SmartPenConstants .swift */; };
 		230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C466024059BE20029EB2B /* DrawingView+Touch.swift */; };
+		230C46632405D9B80029EB2B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C46622405D9B80029EB2B /* Colors.swift */; };
+		230C46652405DEB20029EB2B /* ResultsResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */; };
 		232192192405706A00DF62A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232192182405706A00DF62A7 /* MainViewController.swift */; };
 		2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321921A2405729A00DF62A7 /* DrawingView.swift */; };
+		2359A1B72405E54D00DD2BFC /* HandWritingRecogntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */; };
 		236D5113240459B60098611E /* TestDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D5112240459B60098611E /* TestDataViewController.swift */; };
 		236D511524045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D511424045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift */; };
 		23964C712404615200DE7450 /* segueysNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964C702404615200DE7450 /* segueysNames.swift */; };
@@ -26,8 +29,11 @@
 /* Begin PBXFileReference section */
 		230C465E2405907A0029EB2B /* SmartPenConstants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmartPenConstants .swift"; sourceTree = "<group>"; };
 		230C466024059BE20029EB2B /* DrawingView+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingView+Touch.swift"; sourceTree = "<group>"; };
+		230C46622405D9B80029EB2B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponseApiModel.swift; sourceTree = "<group>"; };
 		232192182405706A00DF62A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2321921A2405729A00DF62A7 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWritingRecogntion.swift; sourceTree = "<group>"; };
 		236D5112240459B60098611E /* TestDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataViewController.swift; sourceTree = "<group>"; };
 		236D511424045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestDataViewController+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
 		23964C702404615200DE7450 /* segueysNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueysNames.swift; sourceTree = "<group>"; };
@@ -56,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230C46662405DFA70029EB2B /* DrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				2321921A2405729A00DF62A7 /* DrawingView.swift */,
+				230C466024059BE20029EB2B /* DrawingView+Touch.swift */,
+			);
+			path = DrawingView;
+			sourceTree = "<group>";
+		};
 		232192172405704000DF62A7 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +84,7 @@
 			children = (
 				23964C702404615200DE7450 /* segueysNames.swift */,
 				230C465E2405907A0029EB2B /* SmartPenConstants .swift */,
+				230C46622405D9B80029EB2B /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -76,6 +92,7 @@
 		235FDC2C240329A4004082AD /* Moya */ = {
 			isa = PBXGroup;
 			children = (
+				2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -163,6 +180,7 @@
 		23C7133C2403281100B8627F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				230C46662405DFA70029EB2B /* DrawingView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -170,8 +188,6 @@
 		23C7133D2403281D00B8627F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2321921A2405729A00DF62A7 /* DrawingView.swift */,
-				230C466024059BE20029EB2B /* DrawingView+Touch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +195,7 @@
 		23C7133E2403282A00B8627F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,7 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2359A1B72405E54D00DD2BFC /* HandWritingRecogntion.swift in Sources */,
+				230C46652405DEB20029EB2B /* ResultsResponseApiModel.swift in Sources */,
 				232192192405706A00DF62A7 /* MainViewController.swift in Sources */,
+				230C46632405D9B80029EB2B /* Colors.swift in Sources */,
 				230C465F2405907A0029EB2B /* SmartPenConstants .swift in Sources */,
 				23964C712404615200DE7450 /* segueysNames.swift in Sources */,
 				236D511524045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift in Sources */,

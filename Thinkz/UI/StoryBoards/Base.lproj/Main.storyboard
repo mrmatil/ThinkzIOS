@@ -101,13 +101,12 @@
                                 </prototypes>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ahn-it-3wb">
-                                <rect key="frame" x="273.5" y="586" width="287" height="31"/>
+                                <rect key="frame" x="337.5" y="586" width="159" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="REp-4C-nx9"/>
                                 </constraints>
                                 <segments>
                                     <segment title="SmartPen"/>
-                                    <segment title="Apple Pencil"/>
                                     <segment title="Touch"/>
                                 </segments>
                                 <connections>

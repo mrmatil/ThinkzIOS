@@ -16,14 +16,13 @@ struct movement{
 
 enum TypeOfInput{
     case SmartPen
-    case ApplePencil
     case Touch
 }
 
 //MARK: Variables & Override stuff
 class DrawingView:UIView{
     private var context:CGContext?
-    private var color:CGColor = CGColor(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1)
+    private var color:CGColor = Colors.black
     private var width:CGFloat = 1.0
     private var lastKnownPosition:CGPoint = CGPoint(x: 0, y: 0)
     internal var coordinates = Array<movement>()
