@@ -1,0 +1,6 @@
+module Pods_Thinkz {
+  umbrella header "Pods-Thinkz-umbrella.h"
+
+  export *
+  module * { export * }
+}

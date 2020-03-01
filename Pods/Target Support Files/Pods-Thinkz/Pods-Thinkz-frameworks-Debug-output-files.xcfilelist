@@ -1,0 +1,5 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MyScriptInteractiveInk_Runtime.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IInkUIReferenceImplementation.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework
