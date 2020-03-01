@@ -17,26 +17,37 @@ enum HandWritingRecognition{
         "Content-Type":"application/json",
         "Ocp-Apim-Subscription-Key":HandWritingRecognition.azureCognitiveKey
         ]
+    static private let paramsForGoogle:[String:String] =
+    [
+        "Content-Type":"application/json",
+        "User-Agent":"PostmanRuntime/7.22.0"
+    ]
     
-    case recognizeFromStrokes(language:language,coordinates:Array<movement>)
+    case recognizeFromStrokesAzure(language:language,coordinates:Array<movement>)
+    case recognizeFromStrokesGoogle(language:language, coordinates:Array<movement>, area:writingAreaDimensions)
+    
 }
 
 extension HandWritingRecognition:TargetType{
     var baseURL: URL {
         switch self{
-        case .recognizeFromStrokes: return URL(string: "https://thinkz.cognitiveservices.azure.com/")!
+        case .recognizeFromStrokesAzure: return URL(string: "https://thinkz.cognitiveservices.azure.com/")!
+        case .recognizeFromStrokesGoogle: return URL(string: "https://www.google.com/inputtools/request?ime=handwriting")!
         }
     }
     
     var path: String {
         switch self{
-        case .recognizeFromStrokes: return "/inkrecognizer/v1.0-preview/recognize"
+        case .recognizeFromStrokesAzure: return "/inkrecognizer/v1.0-preview/recognize"
+        case .recognizeFromStrokesGoogle: return ""
+
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .recognizeFromStrokes: return .put
+        case .recognizeFromStrokesAzure: return .put
+        case .recognizeFromStrokesGoogle: return .post
         }
     }
     
@@ -46,16 +57,25 @@ extension HandWritingRecognition:TargetType{
     
     var task: Task {
         switch self{
-        case .recognizeFromStrokes(let language, let coordinates):
-            let request = Task.requestJSONEncodable(MakeStrokesFromCoordinates.makeStrokesForAzure(coordinates: coordinates, language: language))
+        case .recognizeFromStrokesAzure(let language, let coordinates):
+            let request = Task.requestJSONEncodable(MakeStrokesFromCoordinates.makeStrokesForAzure(coordinates: coordinates,
+                                                                                                   language: language))
+            return request
+        case .recognizeFromStrokesGoogle(let language, let coordinates, let area):
+            let request = Task.requestJSONEncodable(MakeStrokesFromCoordinates.makeStrokesForGoogle(coordinates: coordinates,
+                                                                                                    language: language,
+                                                                                                    areaDimensions: area))
+//            print(request)
             return request
         }
     }
     
     var headers: [String : String]? {
         switch self{
-        case .recognizeFromStrokes:
+        case .recognizeFromStrokesAzure:
             return HandWritingRecognition.paramsForInkRecoginzer
+        case .recognizeFromStrokesGoogle:
+            return HandWritingRecognition.paramsForGoogle
         }
     }
     

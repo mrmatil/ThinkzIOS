@@ -54,6 +54,13 @@ class DrawingView:UIView{
         }
     }
     
+    var areaDimensions:writingAreaDimensions{
+        get{
+            return writingAreaDimensions(width: Int(self.frame.width),
+                                         height: Int(self.frame.height))
+        }
+    }
+    
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
