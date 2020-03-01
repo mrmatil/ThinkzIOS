@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: Settings Protocol
+//MARK: Settings Delegate
 extension MainViewController:MainSettingsProtocol{
     
     func apiChanged(value: PickedProvider) {
@@ -16,5 +16,13 @@ extension MainViewController:MainSettingsProtocol{
         self.pickedProvider = value
     }
     
+}
+
+//MARK: Drawing View Delegate
+extension MainViewController:DrawingViewDelegate{
+    
+    func inputEnded() {
+        MoyaResponse()
+    }
     
 }

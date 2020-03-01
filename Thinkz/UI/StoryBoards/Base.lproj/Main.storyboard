@@ -83,7 +83,7 @@
             <objects>
                 <viewController id="3eA-Av-VJe" customClass="MainSettingsViewController" customModule="Thinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="So6-pL-bIH">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jIg-zk-6MZ">
@@ -160,7 +160,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDP-A7-hV1" customClass="DrawingView" customModule="Thinkz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="636" width="834" height="476"/>
+                                <rect key="frame" x="0.0" y="670" width="834" height="442"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FQ-hf-Oow">
@@ -171,12 +171,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiN-Nr-W5R">
-                                <rect key="frame" x="767" y="589" width="47" height="39"/>
+                                <rect key="frame" x="767" y="589" width="47" height="30"/>
                                 <state key="normal" title="CLEAR"/>
                                 <connections>
                                     <action selector="clearBtnTapped:" destination="8Cf-rf-iQb" eventType="touchUpInside" id="0p3-gF-ccH"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIp-ZW-jC3">
+                                <rect key="frame" x="100" y="626" width="634" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -184,18 +189,19 @@
                             <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="bDP-A7-hV1" secondAttribute="trailing" id="4Mi-9b-a1Q"/>
                             <constraint firstItem="Ahn-it-3wb" firstAttribute="centerX" secondItem="CzT-5Y-Cqy" secondAttribute="centerX" id="6kh-pH-GCX"/>
                             <constraint firstItem="yiN-Nr-W5R" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="8" symbolic="YES" id="Hmc-hn-KI4"/>
-                            <constraint firstItem="bDP-A7-hV1" firstAttribute="top" secondItem="yiN-Nr-W5R" secondAttribute="bottom" constant="8" symbolic="YES" id="MYW-NM-h8y"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="centerY" secondItem="uzq-jg-Obu" secondAttribute="bottom" id="PF4-wQ-07f"/>
-                            <constraint firstItem="bDP-A7-hV1" firstAttribute="top" secondItem="8FQ-hf-Oow" secondAttribute="bottom" constant="20" id="Qtw-IZ-NZQ"/>
                             <constraint firstItem="bDP-A7-hV1" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" id="W6Y-V4-9JQ"/>
+                            <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="uIp-ZW-jC3" secondAttribute="trailing" constant="100" id="aaR-rT-SfI"/>
+                            <constraint firstItem="uIp-ZW-jC3" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" constant="100" id="exL-Is-2Gw"/>
                             <constraint firstItem="8FQ-hf-Oow" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" constant="20" id="gVI-YO-S1x"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="yiN-Nr-W5R" secondAttribute="trailing" constant="20" id="gsF-8B-hMY"/>
-                            <constraint firstItem="bDP-A7-hV1" firstAttribute="top" secondItem="Ahn-it-3wb" secondAttribute="bottom" constant="20" id="lwf-06-U5h"/>
+                            <constraint firstItem="bDP-A7-hV1" firstAttribute="top" secondItem="uIp-ZW-jC3" secondAttribute="bottom" constant="10" id="iBG-Gh-xdy"/>
                             <constraint firstItem="uzq-jg-Obu" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" id="ni9-0d-7Ke"/>
                             <constraint firstItem="8FQ-hf-Oow" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="5" id="pdk-Z1-lNn"/>
                             <constraint firstItem="Ahn-it-3wb" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="5" id="tCU-bR-dGR"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="uzq-jg-Obu" secondAttribute="trailing" id="vGt-PZ-a0d"/>
                             <constraint firstItem="uzq-jg-Obu" firstAttribute="top" secondItem="l1I-te-qNi" secondAttribute="top" id="wwg-eV-TI9"/>
+                            <constraint firstItem="uIp-ZW-jC3" firstAttribute="top" secondItem="Ahn-it-3wb" secondAttribute="bottom" constant="10" id="zvW-Wq-UrS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l1I-te-qNi"/>
                     </view>
@@ -216,13 +222,14 @@
                     <connections>
                         <outlet property="drawingView" destination="bDP-A7-hV1" id="gzn-wb-gDn"/>
                         <outlet property="resultsTableView" destination="uzq-jg-Obu" id="Xbh-pp-7vq"/>
+                        <outlet property="temporaryResultTextField" destination="uIp-ZW-jC3" id="aE5-0X-RV8"/>
                         <outlet property="typeOfInputSegmentedControl" destination="Ahn-it-3wb" id="xTg-Zq-Z4c"/>
                         <segue destination="3eA-Av-VJe" kind="showDetail" identifier="MathToSettings" id="lkg-91-b7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMl-8M-XT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="-93"/>
+            <point key="canvasLocation" x="1652.517985611511" y="-93.345323741007192"/>
         </scene>
         <!--Test Data View Controller-->
         <scene sceneID="C0G-iO-xiI">

@@ -14,6 +14,8 @@ extension DrawingView{
         if typeOfInput == .Touch{
             print(">>> USER TOUCHES STARTED BEING REGISTERED")
         }
+        
+        stateOfInput = .inProgress
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,6 +35,8 @@ extension DrawingView{
             print(">>> USER TOUCHES STOPPED BEING REGISTERED")
         }
         
-        
+        stateOfInput = .none
+        delegate?.inputEnded()
     }
+    
 }

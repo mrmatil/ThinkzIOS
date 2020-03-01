@@ -67,6 +67,7 @@ extension MainViewController{
             let temporaryString = response.recognitionUnits.first?.recognizedText
             guard let recognizedString = temporaryString else {throw AzureResponseErrors.noFreeTry}
             print(">>> AZURE API RESPONSE: " + recognizedString)
+            changeTemporaryResultTextFieldText(text: recognizedString)
     
         }
         catch is AzureResponseErrors{
@@ -84,6 +85,8 @@ extension MainViewController{
             let json = try JSON.init(data: responseJSON)
             let arrayOfBest = json[1][0][1].array!
             print(">>> GOOGLE API RESPONSE: " + arrayOfBest[0].string!)
+            changeTemporaryResultTextFieldText(text: arrayOfBest[0].string!)
+            
         }
         catch{
             print(error.localizedDescription)
@@ -91,5 +94,7 @@ extension MainViewController{
         
 
     }
+    
+    
     
 }

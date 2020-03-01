@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DrawingViewDelegate{
+    func inputEnded()
+}
+
 struct movement{
     
     var start:CGPoint
@@ -19,6 +23,11 @@ enum TypeOfInput{
     case Touch
 }
 
+enum StateOfInput{
+    case none
+    case inProgress
+}
+
 //MARK: Variables & Override stuff
 class DrawingView:UIView{
     private var context:CGContext?
@@ -27,6 +36,7 @@ class DrawingView:UIView{
     private var lastKnownPosition:CGPoint = CGPoint(x: 0, y: 0)
     internal var coordinates = Array<movement>()
     internal var typeOfInput:TypeOfInput = .SmartPen
+    internal var stateOfInput:StateOfInput = .none
     
     var lineColor:CGColor{
         get{
@@ -60,6 +70,8 @@ class DrawingView:UIView{
                                          height: Int(self.frame.height))
         }
     }
+    
+    var delegate:DrawingViewDelegate?
     
 
     override func draw(_ rect: CGRect) {

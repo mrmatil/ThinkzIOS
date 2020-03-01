@@ -19,13 +19,16 @@ class MainViewController: UIViewController {
     internal var pickedProvider:PickedProvider!
     
     
+    @IBOutlet weak var temporaryResultTextField: UITextField!
     @IBOutlet weak var resultsTableView: UITableView!
     @IBOutlet weak var typeOfInputSegmentedControl: UISegmentedControl!
     @IBOutlet weak var drawingView: DrawingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiChanged(value: .Azure)
+        drawingView.delegate = self
+        apiChanged(value: .Google)
+        changeTemporaryResultTextFieldText(text: "")
         setupTableView()
     }
     
@@ -44,6 +47,7 @@ extension MainViewController{
     
     @IBAction func clearBtnTapped(_ sender: UIButton) {
         drawingView.deleteCurrentCoordinates()
+        changeTemporaryResultTextFieldText(text: "")
     }
 
     @IBAction func SettingsButtonTapped(_ sender: UIButton) {
@@ -61,6 +65,11 @@ extension MainViewController{
     
     @IBAction func testBtnTapped(_ sender: UIButton) {
         MoyaResponse()
+    }
+    
+    func changeTemporaryResultTextFieldText(text:String){
+        temporaryResultTextField.text = text
+        temporaryResultTextField.placeholder = "Results"
     }
     
 }
