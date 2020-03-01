@@ -11,7 +11,6 @@ import UIKit
 //MARK: Variables & Main Functions
 class MainViewController: UIViewController {
     
-    internal var myScript:MyScriptEngine?
     
     @IBOutlet weak var resultsTableView: UITableView!
     @IBOutlet weak var typeOfInputSegmentedControl: UISegmentedControl!
@@ -20,7 +19,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        initializeMyScript()
     }
 }
 
