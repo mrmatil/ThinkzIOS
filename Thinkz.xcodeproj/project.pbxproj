@@ -3,20 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07810FFE5DF5918E29F4A1E9 /* Pods_Thinkz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1FB6FAFEAF9586AA24D4F2 /* Pods_Thinkz.framework */; };
+		178CD83F214FA03FACB2F768 /* libPods-Thinkz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD150EC229A94ADAA278B90C /* libPods-Thinkz.a */; };
 		230C465F2405907A0029EB2B /* SmartPenConstants .swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C465E2405907A0029EB2B /* SmartPenConstants .swift */; };
 		230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C466024059BE20029EB2B /* DrawingView+Touch.swift */; };
 		230C46632405D9B80029EB2B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C46622405D9B80029EB2B /* Colors.swift */; };
 		230C46652405DEB20029EB2B /* ResultsResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */; };
 		232192192405706A00DF62A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232192182405706A00DF62A7 /* MainViewController.swift */; };
 		2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321921A2405729A00DF62A7 /* DrawingView.swift */; };
+		233BB6AF240BDCFF00F7E8F4 /* recognition-assets in Resources */ = {isa = PBXBuildFile; fileRef = 233BB6AE240BDCFF00F7E8F4 /* recognition-assets */; };
+		233BB6B2240BDE1F00F7E8F4 /* MyScriptEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BB6B1240BDE1F00F7E8F4 /* MyScriptEngine.swift */; };
+		233BB6B6240BE94E00F7E8F4 /* MyCertificate.c in Sources */ = {isa = PBXBuildFile; fileRef = 233BB6B5240BE94E00F7E8F4 /* MyCertificate.c */; };
+		233BB6BA240BECFC00F7E8F4 /* MainViewController+MyScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BB6B9240BECFC00F7E8F4 /* MainViewController+MyScript.swift */; };
 		2359A1B72405E54D00DD2BFC /* HandWritingRecogntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */; };
+		235A258224067699008AC47E /* MakeStrokesFromCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A258124067699008AC47E /* MakeStrokesFromCoordinates.swift */; };
 		236D5113240459B60098611E /* TestDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D5112240459B60098611E /* TestDataViewController.swift */; };
 		236D511524045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D511424045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift */; };
+		237EDEA8240B1D8200F8A5FD /* MainViewController+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EDEA7240B1D8200F8A5FD /* MainViewController+Moya.swift */; };
+		237EDEAA240B257400F8A5FD /* AzureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EDEA9240B257400F8A5FD /* AzureResponse.swift */; };
+		237EDEAD240B578100F8A5FD /* MainSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EDEAC240B578100F8A5FD /* MainSettingsViewController.swift */; };
 		23964C712404615200DE7450 /* segueysNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964C702404615200DE7450 /* segueysNames.swift */; };
 		23C71323240326FC00B8627F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C71322240326FC00B8627F /* AppDelegate.swift */; };
 		23C71325240326FC00B8627F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C71324240326FC00B8627F /* SceneDelegate.swift */; };
@@ -33,9 +41,19 @@
 		230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponseApiModel.swift; sourceTree = "<group>"; };
 		232192182405706A00DF62A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2321921A2405729A00DF62A7 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		233BB6AE240BDCFF00F7E8F4 /* recognition-assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "recognition-assets"; sourceTree = "<group>"; };
+		233BB6B1240BDE1F00F7E8F4 /* MyScriptEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptEngine.swift; sourceTree = "<group>"; };
+		233BB6B5240BE94E00F7E8F4 /* MyCertificate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyCertificate.c; sourceTree = "<group>"; };
+		233BB6B9240BECFC00F7E8F4 /* MainViewController+MyScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+MyScript.swift"; sourceTree = "<group>"; };
 		2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWritingRecogntion.swift; sourceTree = "<group>"; };
+		235A258124067699008AC47E /* MakeStrokesFromCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStrokesFromCoordinates.swift; sourceTree = "<group>"; };
 		236D5112240459B60098611E /* TestDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataViewController.swift; sourceTree = "<group>"; };
 		236D511424045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestDataViewController+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
+		237EDEA7240B1D8200F8A5FD /* MainViewController+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Moya.swift"; sourceTree = "<group>"; };
+		237EDEA9240B257400F8A5FD /* AzureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureResponse.swift; sourceTree = "<group>"; };
+		237EDEAC240B578100F8A5FD /* MainSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsViewController.swift; sourceTree = "<group>"; };
+		237EDEAF240B5B8600F8A5FD /* MyCertificate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCertificate.h; sourceTree = "<group>"; };
+		237EDEB0240B5B9200F8A5FD /* Thinkz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thinkz-Bridging-Header.h"; sourceTree = "<group>"; };
 		23964C702404615200DE7450 /* segueysNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueysNames.swift; sourceTree = "<group>"; };
 		23C7131F240326FC00B8627F /* Thinkz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thinkz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C71322240326FC00B8627F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +65,7 @@
 		23C713302403270100B8627F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D62BF094D2087BBB00EECBB /* Pods-Thinkz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinkz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thinkz/Pods-Thinkz.debug.xcconfig"; sourceTree = "<group>"; };
 		80C40E0E470F8FCE90715230 /* Pods-Thinkz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinkz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thinkz/Pods-Thinkz.release.xcconfig"; sourceTree = "<group>"; };
-		8F1FB6FAFEAF9586AA24D4F2 /* Pods_Thinkz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thinkz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD150EC229A94ADAA278B90C /* libPods-Thinkz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thinkz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07810FFE5DF5918E29F4A1E9 /* Pods_Thinkz.framework in Frameworks */,
+				178CD83F214FA03FACB2F768 /* libPods-Thinkz.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +93,18 @@
 			isa = PBXGroup;
 			children = (
 				232192182405706A00DF62A7 /* MainViewController.swift */,
+				237EDEA7240B1D8200F8A5FD /* MainViewController+Moya.swift */,
+				233BB6B9240BECFC00F7E8F4 /* MainViewController+MyScript.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		233BB6B0240BDE0300F7E8F4 /* MyScript */ = {
+			isa = PBXGroup;
+			children = (
+				233BB6B1240BDE1F00F7E8F4 /* MyScriptEngine.swift */,
+			);
+			path = MyScript;
 			sourceTree = "<group>";
 		};
 		235AD21F24033BCA00ACCA58 /* Constants */ = {
@@ -87,6 +115,15 @@
 				230C46622405D9B80029EB2B /* Colors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		235E4D78240BD9D800BEFDE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23C7132B2403270100B8627F /* Assets.xcassets */,
+				233BB6AE240BDCFF00F7E8F4 /* recognition-assets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		235FDC2C240329A4004082AD /* Moya */ = {
@@ -104,6 +141,24 @@
 				236D511424045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift */,
 			);
 			path = TestDataViewController;
+			sourceTree = "<group>";
+		};
+		237EDEAB240B575100F8A5FD /* MainSettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				237EDEAC240B578100F8A5FD /* MainSettingsViewController.swift */,
+			);
+			path = MainSettingsViewController;
+			sourceTree = "<group>";
+		};
+		237EDEAE240B5B6300F8A5FD /* MyScriptCertificate */ = {
+			isa = PBXGroup;
+			children = (
+				237EDEB0240B5B9200F8A5FD /* Thinkz-Bridging-Header.h */,
+				237EDEAF240B5B8600F8A5FD /* MyCertificate.h */,
+				233BB6B5240BE94E00F7E8F4 /* MyCertificate.c */,
+			);
+			path = MyScriptCertificate;
 			sourceTree = "<group>";
 		};
 		23C71316240326FC00B8627F = {
@@ -134,6 +189,7 @@
 				23C7133E2403282A00B8627F /* Models */,
 				23C7133F2403285C00B8627F /* Services */,
 				23C7133D2403281D00B8627F /* Extensions */,
+				235E4D78240BD9D800BEFDE2 /* Resources */,
 				23C713302403270100B8627F /* Info.plist */,
 			);
 			path = Thinkz;
@@ -145,6 +201,7 @@
 				23C713382403275700B8627F /* StoryBoards */,
 				23C713372403273300B8627F /* InitialViewController */,
 				232192172405704000DF62A7 /* MainViewController */,
+				237EDEAB240B575100F8A5FD /* MainSettingsViewController */,
 				236D5111240459810098611E /* TestDataViewController */,
 			);
 			path = UI;
@@ -170,9 +227,9 @@
 		23C7133B240327C800B8627F /* App Specific Files */ = {
 			isa = PBXGroup;
 			children = (
+				237EDEAE240B5B6300F8A5FD /* MyScriptCertificate */,
 				23C71322240326FC00B8627F /* AppDelegate.swift */,
 				23C71324240326FC00B8627F /* SceneDelegate.swift */,
-				23C7132B2403270100B8627F /* Assets.xcassets */,
 			);
 			path = "App Specific Files";
 			sourceTree = "<group>";
@@ -180,7 +237,9 @@
 		23C7133C2403281100B8627F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				233BB6B0240BDE0300F7E8F4 /* MyScript */,
 				230C46662405DFA70029EB2B /* DrawingView */,
+				235A258124067699008AC47E /* MakeStrokesFromCoordinates.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -196,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */,
+				237EDEA9240B257400F8A5FD /* AzureResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,7 +280,7 @@
 		5929439FC63F7E98B96C586D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F1FB6FAFEAF9586AA24D4F2 /* Pods_Thinkz.framework */,
+				DD150EC229A94ADAA278B90C /* libPods-Thinkz.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,7 +296,6 @@
 				23C7131B240326FC00B8627F /* Sources */,
 				23C7131C240326FC00B8627F /* Frameworks */,
 				23C7131D240326FC00B8627F /* Resources */,
-				ED5831F94ECDB2D9E022D7DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +318,7 @@
 				TargetAttributes = {
 					23C7131E240326FC00B8627F = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -288,6 +348,7 @@
 				23C7132F2403270100B8627F /* LaunchScreen.storyboard in Resources */,
 				23C7132C2403270100B8627F /* Assets.xcassets in Resources */,
 				23C7132A240326FC00B8627F /* Main.storyboard in Resources */,
+				233BB6AF240BDCFF00F7E8F4 /* recognition-assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,23 +373,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ED5831F94ECDB2D9E022D7DC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thinkz/Pods-Thinkz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thinkz/Pods-Thinkz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thinkz/Pods-Thinkz-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -338,14 +382,21 @@
 			files = (
 				2359A1B72405E54D00DD2BFC /* HandWritingRecogntion.swift in Sources */,
 				230C46652405DEB20029EB2B /* ResultsResponseApiModel.swift in Sources */,
+				233BB6BA240BECFC00F7E8F4 /* MainViewController+MyScript.swift in Sources */,
 				232192192405706A00DF62A7 /* MainViewController.swift in Sources */,
 				230C46632405D9B80029EB2B /* Colors.swift in Sources */,
+				237EDEAA240B257400F8A5FD /* AzureResponse.swift in Sources */,
+				237EDEA8240B1D8200F8A5FD /* MainViewController+Moya.swift in Sources */,
+				235A258224067699008AC47E /* MakeStrokesFromCoordinates.swift in Sources */,
 				230C465F2405907A0029EB2B /* SmartPenConstants .swift in Sources */,
 				23964C712404615200DE7450 /* segueysNames.swift in Sources */,
+				233BB6B6240BE94E00F7E8F4 /* MyCertificate.c in Sources */,
 				236D511524045B850098611E /* TestDataViewController+CBCentralManagerDelegate.swift in Sources */,
+				237EDEAD240B578100F8A5FD /* MainSettingsViewController.swift in Sources */,
 				2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */,
 				230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */,
 				236D5113240459B60098611E /* TestDataViewController.swift in Sources */,
+				233BB6B2240BDE1F00F7E8F4 /* MyScriptEngine.swift in Sources */,
 				23C71327240326FC00B8627F /* InitialViewController.swift in Sources */,
 				23C71323240326FC00B8627F /* AppDelegate.swift in Sources */,
 				23C71325240326FC00B8627F /* SceneDelegate.swift in Sources */,
@@ -493,6 +544,7 @@
 			baseConfigurationReference = 2D62BF094D2087BBB00EECBB /* Pods-Thinkz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7CS6N8JRT4;
 				INFOPLIST_FILE = Thinkz/Info.plist;
@@ -502,6 +554,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MLukasinski.Thinkz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Thinkz/App Specific Files/MyScriptCertificate/Thinkz-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -512,6 +566,7 @@
 			baseConfigurationReference = 80C40E0E470F8FCE90715230 /* Pods-Thinkz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7CS6N8JRT4;
 				INFOPLIST_FILE = Thinkz/Info.plist;
@@ -521,6 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MLukasinski.Thinkz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Thinkz/App Specific Files/MyScriptCertificate/Thinkz-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
