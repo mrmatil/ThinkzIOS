@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
     }
-    
 }
 
 //MARK: UI Actions
@@ -30,7 +29,12 @@ extension MainViewController{
     @IBAction func clearBtnTapped(_ sender: UIButton) {
         drawingView.deleteCurrentCoordinates()
     }
+
+    @IBAction func SettingsButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueysNames.MathToSettings, sender: self)
+    }
     
+
     @IBAction func typeOfInputSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0: drawingView.changeInputType = .SmartPen
@@ -40,6 +44,7 @@ extension MainViewController{
     }
     
     @IBAction func testBtnTapped(_ sender: UIButton) {
+        MoyaResponse()
     }
     
 }
@@ -76,3 +81,4 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
     
     
 }
+

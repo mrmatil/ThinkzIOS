@@ -35,3 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//MARK: - MyScript
+extension AppDelegate{
+    
+}
+

@@ -78,6 +78,21 @@
             </objects>
             <point key="canvasLocation" x="884.1726618705037" y="137.58992805755395"/>
         </scene>
+        <!--Main Settings View Controller-->
+        <scene sceneID="vGp-uM-nnD">
+            <objects>
+                <viewController id="3eA-Av-VJe" customClass="MainSettingsViewController" customModule="Thinkz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="So6-pL-bIH">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Lrg-Ve-2KZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PpA-J0-MaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="-716"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="Mx4-yf-c8R">
             <objects>
@@ -153,11 +168,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l1I-te-qNi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9KB-YF-AtO"/>
+                    <navigationItem key="navigationItem" id="9KB-YF-AtO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="4bL-bS-CgD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aO3-fp-f4j">
+                                <rect key="frame" x="723" y="8" width="91" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SettingsButtonTapped:" destination="8Cf-rf-iQb" eventType="touchUpInside" id="ErZ-q6-EFY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="drawingView" destination="bDP-A7-hV1" id="gzn-wb-gDn"/>
                         <outlet property="resultsTableView" destination="uzq-jg-Obu" id="Xbh-pp-7vq"/>
                         <outlet property="typeOfInputSegmentedControl" destination="Ahn-it-3wb" id="xTg-Zq-Z4c"/>
+                        <segue destination="3eA-Av-VJe" kind="showDetail" identifier="MathToSettings" id="lkg-91-b7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMl-8M-XT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

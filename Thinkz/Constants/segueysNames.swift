@@ -12,4 +12,5 @@ class SegueysNames{
     
     static let initialToTest:String = "InitToTest"
     static let initialToMath:String = "InitToMath"
+    static let MathToSettings:String = "MathToSettings"
 }
