@@ -11,43 +11,50 @@ import Moya
 import SwiftyJSON
 
 
-internal extension MainViewController{
+extension MainViewController{
 
     func MoyaResponse(){
         
         let provider = MoyaProvider<HandWritingRecognition>()
         
-        //MARK: Azure Request
-        provider.request(.recognizeFromStrokesAzure(language: .english,
-                                                    coordinates: drawingView.coordinates))
-        { (response) in
+        switch pickedProvider{
+        case .Azure:
             
-            switch response{
-            case .success(let response):
-                self.parseJSONintoAzureObject(responseData: response.data)
-            case .failure(let error):
-                print(">>> AZURE API RESPONSE ERROR: \(error)")
+            //MARK: Azure Request
+            provider.request(.recognizeFromStrokesAzure(language: .english,
+                                                        coordinates: drawingView.coordinates))
+            { (response) in
+                
+                switch response{
+                case .success(let response):
+                    self.parseJSONintoAzureObject(responseData: response.data)
+                case .failure(let error):
+                    print(">>> AZURE API RESPONSE ERROR: \(error)")
+                }
+                
             }
             
-        }
-        
-        
-        //MARK: Google Request
-        
-        provider.request(.recognizeFromStrokesGoogle(language: .english,
-                                                     coordinates: drawingView.coordinates,
-                                                     area: drawingView.areaDimensions))
-        { (response) in
-            switch response{
-            case .success(let response):
-//                print(try! response.mapString())
-//                print(try! response.mapJSON())
-                self.parseGoogleJSON(responseJSON: response.data)
-            case .failure(let error):
-                print(">>> GOOGLE API RESPONSE ERROR: \(error)")
+        case .Google:
+            
+            //MARK: Google Request
+            
+            provider.request(.recognizeFromStrokesGoogle(language: .english,
+                                                         coordinates: drawingView.coordinates,
+                                                         area: drawingView.areaDimensions))
+            { (response) in
+                switch response{
+                case .success(let response):
+                    self.parseGoogleJSON(responseJSON: response.data)
+//                    print(try! response.mapJSON())
+                case .failure(let error):
+                    print(">>> GOOGLE API RESPONSE ERROR: \(error)")
+                }
             }
+            
+        case .none:
+            return
         }
-        
+  
     }
     
     private func parseJSONintoAzureObject(responseData:Data){

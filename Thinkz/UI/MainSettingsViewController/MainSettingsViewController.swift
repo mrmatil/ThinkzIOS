@@ -8,23 +8,40 @@
 
 import UIKit
 
+protocol MainSettingsProtocol {
+    func apiChanged(value:PickedProvider)
+}
+
 class MainSettingsViewController: UIViewController {
+    
+    var delegate:MainSettingsProtocol?
+    var apiSelectedIndex:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        apiSegmentedControl.selectedSegmentIndex = apiSelectedIndex
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setSettingsToCorrespondCurrendValues(currentProvider:PickedProvider){
+        
+        switch currentProvider{
+        case .Azure:  apiSelectedIndex = 0
+        case .Google: apiSelectedIndex = 1
+        }
+        
     }
-    */
-
+    
+    @IBOutlet weak var apiSegmentedControl: UISegmentedControl!
+    
+    @IBAction func apiSegmentedControlChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            delegate?.apiChanged(value: .Azure)
+        case 1:
+            delegate?.apiChanged(value: .Google)
+        default:
+            return
+        }
+    }
+    
 }

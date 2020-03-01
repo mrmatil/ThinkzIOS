@@ -83,11 +83,42 @@
             <objects>
                 <viewController id="3eA-Av-VJe" customClass="MainSettingsViewController" customModule="Thinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="So6-pL-bIH">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jIg-zk-6MZ">
+                                <rect key="frame" x="30" y="40" width="652" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE OF API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We8-is-8se">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FT5-RV-IEa">
+                                        <rect key="frame" x="330" y="0.0" width="322" height="32"/>
+                                        <segments>
+                                            <segment title="Azure"/>
+                                            <segment title="Google"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="apiSegmentedControlChanged:" destination="3eA-Av-VJe" eventType="valueChanged" id="McD-ni-7Z5"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jIg-zk-6MZ" firstAttribute="top" secondItem="Lrg-Ve-2KZ" secondAttribute="top" constant="40" id="DIc-6Q-bqX"/>
+                            <constraint firstItem="Lrg-Ve-2KZ" firstAttribute="trailing" secondItem="jIg-zk-6MZ" secondAttribute="trailing" constant="30" id="aTV-Ef-Teo"/>
+                            <constraint firstItem="jIg-zk-6MZ" firstAttribute="leading" secondItem="Lrg-Ve-2KZ" secondAttribute="leading" constant="30" id="wpl-YQ-XE4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lrg-Ve-2KZ"/>
                     </view>
+                    <connections>
+                        <outlet property="apiSegmentedControl" destination="FT5-RV-IEa" id="4nd-Yn-eTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpA-J0-MaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,8 +8,15 @@
 
 import UIKit
 
+enum PickedProvider {
+    case Azure
+    case Google
+}
+
 //MARK: Variables & Main Functions
 class MainViewController: UIViewController {
+    
+    internal var pickedProvider:PickedProvider!
     
     
     @IBOutlet weak var resultsTableView: UITableView!
@@ -18,7 +25,16 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        apiChanged(value: .Azure)
         setupTableView()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueysNames.MathToSettings{
+            let destination = segue.destination as! MainSettingsViewController
+            destination.delegate = self
+            destination.setSettingsToCorrespondCurrendValues(currentProvider: pickedProvider)
+        }
     }
 }
 

@@ -57,7 +57,7 @@
 		237EDEAA240B257400F8A5FD /* AzureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EDEA9240B257400F8A5FD /* AzureResponse.swift */; };
 		237EDEAD240B578100F8A5FD /* MainSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EDEAC240B578100F8A5FD /* MainSettingsViewController.swift */; };
 		23964C712404615200DE7450 /* segueysNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23964C702404615200DE7450 /* segueysNames.swift */; };
-		23A90B92240C3E05007BF3DB /* GoogleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A90B91240C3E05007BF3DB /* GoogleResponse.swift */; };
+		23A90B94240C4700007BF3DB /* MainViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A90B93240C4700007BF3DB /* MainViewController+Delegates.swift */; };
 		23C71323240326FC00B8627F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C71322240326FC00B8627F /* AppDelegate.swift */; };
 		23C71325240326FC00B8627F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C71324240326FC00B8627F /* SceneDelegate.swift */; };
 		23C71327240326FC00B8627F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C71326240326FC00B8627F /* InitialViewController.swift */; };
@@ -151,7 +151,7 @@
 		237EDEA9240B257400F8A5FD /* AzureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureResponse.swift; sourceTree = "<group>"; };
 		237EDEAC240B578100F8A5FD /* MainSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsViewController.swift; sourceTree = "<group>"; };
 		23964C702404615200DE7450 /* segueysNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segueysNames.swift; sourceTree = "<group>"; };
-		23A90B91240C3E05007BF3DB /* GoogleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleResponse.swift; sourceTree = "<group>"; };
+		23A90B93240C4700007BF3DB /* MainViewController+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Delegates.swift"; sourceTree = "<group>"; };
 		23C7131F240326FC00B8627F /* Thinkz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thinkz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C71322240326FC00B8627F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C71324240326FC00B8627F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +192,7 @@
 			children = (
 				232192182405706A00DF62A7 /* MainViewController.swift */,
 				237EDEA7240B1D8200F8A5FD /* MainViewController+Moya.swift */,
+				23A90B93240C4700007BF3DB /* MainViewController+Delegates.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -482,7 +483,6 @@
 			children = (
 				230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */,
 				237EDEA9240B257400F8A5FD /* AzureResponse.swift */,
-				23A90B91240C3E05007BF3DB /* GoogleResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -623,13 +623,13 @@
 			files = (
 				233BB758240C040900F7E8F4 /* lidata.c in Sources */,
 				2359A1B72405E54D00DD2BFC /* HandWritingRecogntion.swift in Sources */,
+				23A90B94240C4700007BF3DB /* MainViewController+Delegates.swift in Sources */,
 				230C46652405DEB20029EB2B /* ResultsResponseApiModel.swift in Sources */,
 				232192192405706A00DF62A7 /* MainViewController.swift in Sources */,
 				230C46632405D9B80029EB2B /* Colors.swift in Sources */,
 				233BB762240C041B00F7E8F4 /* Shortcuts.m in Sources */,
 				233BB776240C042800F7E8F4 /* SuggestionsView.m in Sources */,
 				233BB77F240C043100F7E8F4 /* InkCollectorView.m in Sources */,
-				23A90B92240C3E05007BF3DB /* GoogleResponse.swift in Sources */,
 				233BB775240C042800F7E8F4 /* RectObject.m in Sources */,
 				237EDEAA240B257400F8A5FD /* AzureResponse.swift in Sources */,
 				233BB77A240C042800F7E8F4 /* RecognizerManager.m in Sources */,
