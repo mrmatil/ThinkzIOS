@@ -14,6 +14,7 @@
 		230C46652405DEB20029EB2B /* ResultsResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */; };
 		232192192405706A00DF62A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232192182405706A00DF62A7 /* MainViewController.swift */; };
 		2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321921A2405729A00DF62A7 /* DrawingView.swift */; };
+		23342077240ED2D400D17C6C /* MainViewController+CoreBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342076240ED2D400D17C6C /* MainViewController+CoreBluetooth.swift */; };
 		233BB71D240C00F400F7E8F4 /* MedicalUS.dct in Resources */ = {isa = PBXBuildFile; fileRef = 233BB6D8240C00F400F7E8F4 /* MedicalUS.dct */; };
 		233BB71E240C00F400F7E8F4 /* English.dct in Resources */ = {isa = PBXBuildFile; fileRef = 233BB6D9240C00F400F7E8F4 /* English.dct */; };
 		233BB71F240C00F400F7E8F4 /* Brazilian.dct in Resources */ = {isa = PBXBuildFile; fileRef = 233BB6DA240C00F400F7E8F4 /* Brazilian.dct */; };
@@ -73,6 +74,7 @@
 		230C46642405DEB20029EB2B /* ResultsResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponseApiModel.swift; sourceTree = "<group>"; };
 		232192182405706A00DF62A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2321921A2405729A00DF62A7 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		23342076240ED2D400D17C6C /* MainViewController+CoreBluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CoreBluetooth.swift"; sourceTree = "<group>"; };
 		233BB6D8240C00F400F7E8F4 /* MedicalUS.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = MedicalUS.dct; sourceTree = "<group>"; };
 		233BB6D9240C00F400F7E8F4 /* English.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = English.dct; sourceTree = "<group>"; };
 		233BB6DA240C00F400F7E8F4 /* Brazilian.dct */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brazilian.dct; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				232192182405706A00DF62A7 /* MainViewController.swift */,
 				237EDEA7240B1D8200F8A5FD /* MainViewController+Moya.swift */,
+				23342076240ED2D400D17C6C /* MainViewController+CoreBluetooth.swift */,
 				23A90B93240C4700007BF3DB /* MainViewController+Delegates.swift */,
 			);
 			path = MainViewController;
@@ -644,6 +647,7 @@
 				2321921B2405729A00DF62A7 /* DrawingView.swift in Sources */,
 				233BB786240C043B00F7E8F4 /* AsyncResultView.m in Sources */,
 				233BB779240C042800F7E8F4 /* NSMutableArray+AddUnique.m in Sources */,
+				23342077240ED2D400D17C6C /* MainViewController+CoreBluetooth.swift in Sources */,
 				230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */,
 				233BB787240C043B00F7E8F4 /* WritePadInputView.m in Sources */,
 				236D5113240459B60098611E /* TestDataViewController.swift in Sources */,

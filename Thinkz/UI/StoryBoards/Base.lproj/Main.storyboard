@@ -171,7 +171,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiN-Nr-W5R">
-                                <rect key="frame" x="767" y="589" width="47" height="30"/>
+                                <rect key="frame" x="760.5" y="586" width="47" height="37"/>
                                 <state key="normal" title="CLEAR"/>
                                 <connections>
                                     <action selector="clearBtnTapped:" destination="8Cf-rf-iQb" eventType="touchUpInside" id="0p3-gF-ccH"/>
@@ -182,22 +182,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHo-dT-QMx">
+                                <rect key="frame" x="739" y="628" width="90" height="30"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextBtnTapped:" destination="8Cf-rf-iQb" eventType="touchUpInside" id="eJ5-jW-RGH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="bottom" secondItem="bDP-A7-hV1" secondAttribute="bottom" id="1Y8-Ln-oS9"/>
+                            <constraint firstItem="EHo-dT-QMx" firstAttribute="centerX" secondItem="yiN-Nr-W5R" secondAttribute="centerX" id="2tN-cm-ilw"/>
+                            <constraint firstItem="EHo-dT-QMx" firstAttribute="top" secondItem="yiN-Nr-W5R" secondAttribute="bottom" constant="5" id="40F-i8-80v"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="bDP-A7-hV1" secondAttribute="trailing" id="4Mi-9b-a1Q"/>
                             <constraint firstItem="Ahn-it-3wb" firstAttribute="centerX" secondItem="CzT-5Y-Cqy" secondAttribute="centerX" id="6kh-pH-GCX"/>
-                            <constraint firstItem="yiN-Nr-W5R" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="8" symbolic="YES" id="Hmc-hn-KI4"/>
+                            <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="EHo-dT-QMx" secondAttribute="trailing" constant="5" id="GH9-Aj-7PT"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="centerY" secondItem="uzq-jg-Obu" secondAttribute="bottom" id="PF4-wQ-07f"/>
                             <constraint firstItem="bDP-A7-hV1" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" id="W6Y-V4-9JQ"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="uIp-ZW-jC3" secondAttribute="trailing" constant="100" id="aaR-rT-SfI"/>
                             <constraint firstItem="uIp-ZW-jC3" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" constant="100" id="exL-Is-2Gw"/>
                             <constraint firstItem="8FQ-hf-Oow" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" constant="20" id="gVI-YO-S1x"/>
-                            <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="yiN-Nr-W5R" secondAttribute="trailing" constant="20" id="gsF-8B-hMY"/>
                             <constraint firstItem="bDP-A7-hV1" firstAttribute="top" secondItem="uIp-ZW-jC3" secondAttribute="bottom" constant="10" id="iBG-Gh-xdy"/>
+                            <constraint firstItem="EHo-dT-QMx" firstAttribute="leading" secondItem="uIp-ZW-jC3" secondAttribute="trailing" constant="5" id="kG2-BN-U0a"/>
+                            <constraint firstItem="yiN-Nr-W5R" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="5" id="nXu-q3-i42"/>
                             <constraint firstItem="uzq-jg-Obu" firstAttribute="leading" secondItem="l1I-te-qNi" secondAttribute="leading" id="ni9-0d-7Ke"/>
                             <constraint firstItem="8FQ-hf-Oow" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="5" id="pdk-Z1-lNn"/>
+                            <constraint firstItem="EHo-dT-QMx" firstAttribute="centerY" secondItem="uIp-ZW-jC3" secondAttribute="centerY" id="sUr-oI-FSt"/>
                             <constraint firstItem="Ahn-it-3wb" firstAttribute="top" secondItem="uzq-jg-Obu" secondAttribute="bottom" constant="5" id="tCU-bR-dGR"/>
                             <constraint firstItem="l1I-te-qNi" firstAttribute="trailing" secondItem="uzq-jg-Obu" secondAttribute="trailing" id="vGt-PZ-a0d"/>
                             <constraint firstItem="uzq-jg-Obu" firstAttribute="top" secondItem="l1I-te-qNi" secondAttribute="top" id="wwg-eV-TI9"/>

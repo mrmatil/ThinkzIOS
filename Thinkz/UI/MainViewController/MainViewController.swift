@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 enum PickedProvider {
     case Azure
@@ -17,7 +18,10 @@ enum PickedProvider {
 class MainViewController: UIViewController {
     
     internal var pickedProvider:PickedProvider!
+    private var results:[String] = [""]
     
+    internal var manager:CBCentralManager!
+    internal var peripheral:CBPeripheral!
     
     @IBOutlet weak var temporaryResultTextField: UITextField!
     @IBOutlet weak var resultsTableView: UITableView!
@@ -30,6 +34,7 @@ class MainViewController: UIViewController {
         apiChanged(value: .Google)
         changeTemporaryResultTextFieldText(text: "")
         setupTableView()
+        initializeBlueToothConnection()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,6 +72,13 @@ extension MainViewController{
         MoyaResponse()
     }
     
+    @IBAction func nextBtnTapped(_ sender: UIButton) {
+        results[results.count-1] += " \(temporaryResultTextField.text ?? "")" 
+        drawingView.deleteCurrentCoordinates()
+        changeTemporaryResultTextFieldText(text: "")
+        resultsTableView.reloadData()
+    }
+
     func changeTemporaryResultTextFieldText(text:String){
         temporaryResultTextField.text = text
         temporaryResultTextField.placeholder = "Results"
@@ -86,21 +98,21 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
         
     }
     
-    func setupTableViewCell(row:IndexPath)->UITableViewCell{
+    func setupTableViewCell(indexPath:IndexPath)->UITableViewCell{
         let cell = UITableViewCell(style: .default, reuseIdentifier: "resultCell")
         cell.accessoryType = .none
-        cell.textLabel?.text = "Thinkz"
+        cell.textLabel?.text = results[indexPath.row]
         
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return setupTableViewCell(row: indexPath)
+        return setupTableViewCell(indexPath: indexPath)
     }
     
     

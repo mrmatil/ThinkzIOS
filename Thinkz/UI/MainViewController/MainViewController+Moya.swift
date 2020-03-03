@@ -38,7 +38,7 @@ extension MainViewController{
             
             //MARK: Google Request
             
-            provider.request(.recognizeFromStrokesGoogle(language: .english,
+            provider.request(.recognizeFromStrokesGoogle(language: .polish,
                                                          coordinates: drawingView.coordinates,
                                                          area: drawingView.areaDimensions))
             { (response) in
@@ -83,9 +83,11 @@ extension MainViewController{
         
         do{
             let json = try JSON.init(data: responseJSON)
-            let arrayOfBest = json[1][0][1].array!
-            print(">>> GOOGLE API RESPONSE: " + arrayOfBest[0].string!)
-            changeTemporaryResultTextFieldText(text: arrayOfBest[0].string!)
+            guard let arrayOfBest = json[1][0][1].array else {return}
+            if arrayOfBest.count == 0 {return}
+            guard let response = arrayOfBest[0].string else {return}
+            print(">>> GOOGLE API RESPONSE: " + response)
+            changeTemporaryResultTextFieldText(text: response)
             
         }
         catch{
