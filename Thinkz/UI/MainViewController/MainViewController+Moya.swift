@@ -21,7 +21,7 @@ extension MainViewController{
         case .Azure:
             
             //MARK: Azure Request
-            provider.request(.recognizeFromStrokesAzure(language: .english,
+            provider.request(.recognizeFromStrokesAzure(language: .polish,
                                                         coordinates: drawingView.coordinates))
             { (response) in
                 

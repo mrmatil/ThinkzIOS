@@ -85,7 +85,13 @@ class DrawingView:UIView{
 //MARK: Public Functions
 extension DrawingView{
     
+    //Function that needs variable lastKnownPosition
     func addNewCoordinates(x:Double,y:Double){
+        if stateOfInput == .none{
+            lastKnownPosition = CGPoint(x: x, y: y)
+            stateOfInput = .inProgress
+            return
+        }
         let move = movement(start: lastKnownPosition,
                             end: CGPoint(x: x, y: y))
         coordinates.append(move)
@@ -123,6 +129,11 @@ extension DrawingView{
         let newY = y * heightMultiply
 
         return (newX,newY)
+    }
+    
+    func stoppedWriting(){
+        lastKnownPosition = CGPoint(x: 0, y: 0)
+        stateOfInput = .none
     }
 
 }

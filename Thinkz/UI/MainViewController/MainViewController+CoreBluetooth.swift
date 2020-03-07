@@ -16,6 +16,15 @@ extension MainViewController:CBCentralManagerDelegate,CBPeripheralDelegate{
     func initializeBlueToothConnection(){
         manager = CBCentralManager(delegate: self, queue: nil)
     }
+    
+    func sendDataToDrawingView(unParsedData:String){
+        let (x,y,isWriting) = SmartpenDataParser.getDataFromStringData(data: unParsedData)
+        if isWriting{
+            drawingView.addNewCoordinates(x: x, y: y)
+        } else{
+            drawingView.stoppedWriting()
+        }
+    }
 
     
     //MARK: Delegate Functions
@@ -28,7 +37,10 @@ extension MainViewController:CBCentralManagerDelegate,CBPeripheralDelegate{
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        
+        let device = (advertisementData as NSDictionary)
+            .object(forKey: CBAdvertisementDataServiceDataKey)
+           as? NSString
+//        print(device)
         if peripheral.identifier == SmartPenConstants.SMARTPEN_UUID{
             self.manager.stopScan()
             self.peripheral = peripheral
@@ -40,8 +52,9 @@ extension MainViewController:CBCentralManagerDelegate,CBPeripheralDelegate{
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        var data = characteristic.value
-        print(data)
+        let data = characteristic.value
+        let dataInString = data!.description
+        sendDataToDrawingView(unParsedData: dataInString)
     }
 
     

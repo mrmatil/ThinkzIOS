@@ -50,6 +50,8 @@
 		233BB786240C043B00F7E8F4 /* AsyncResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 233BB780240C043B00F7E8F4 /* AsyncResultView.m */; };
 		233BB787240C043B00F7E8F4 /* WritePadInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 233BB782240C043B00F7E8F4 /* WritePadInputView.m */; };
 		233BB788240C043B00F7E8F4 /* WritePadInputPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 233BB783240C043B00F7E8F4 /* WritePadInputPanel.m */; };
+		234141A1240FC64C005E9E86 /* SmartpenDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234141A0240FC64C005E9E86 /* SmartpenDataParser.swift */; };
+		234141A3240FCC13005E9E86 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234141A2240FCC13005E9E86 /* StringExtension.swift */; };
 		2359A1B72405E54D00DD2BFC /* HandWritingRecogntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */; };
 		235A258224067699008AC47E /* MakeStrokesFromCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A258124067699008AC47E /* MakeStrokesFromCoordinates.swift */; };
 		236D5113240459B60098611E /* TestDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D5112240459B60098611E /* TestDataViewController.swift */; };
@@ -145,6 +147,8 @@
 		233BB783240C043B00F7E8F4 /* WritePadInputPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WritePadInputPanel.m; sourceTree = "<group>"; };
 		233BB784240C043B00F7E8F4 /* AsyncResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncResultView.h; sourceTree = "<group>"; };
 		233BB785240C043B00F7E8F4 /* WritePadInputPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WritePadInputPanel.h; sourceTree = "<group>"; };
+		234141A0240FC64C005E9E86 /* SmartpenDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartpenDataParser.swift; sourceTree = "<group>"; };
+		234141A2240FCC13005E9E86 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Thinkz/Common/StringExtension.swift; sourceTree = SOURCE_ROOT; };
 		2359A1B62405E54D00DD2BFC /* HandWritingRecogntion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWritingRecogntion.swift; sourceTree = "<group>"; };
 		235A258124067699008AC47E /* MakeStrokesFromCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStrokesFromCoordinates.swift; sourceTree = "<group>"; };
 		236D5112240459B60098611E /* TestDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataViewController.swift; sourceTree = "<group>"; };
@@ -470,6 +474,7 @@
 			children = (
 				230C46662405DFA70029EB2B /* DrawingView */,
 				235A258124067699008AC47E /* MakeStrokesFromCoordinates.swift */,
+				234141A0240FC64C005E9E86 /* SmartpenDataParser.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 		23C7133D2403281D00B8627F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				234141A2240FCC13005E9E86 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -636,6 +642,7 @@
 				233BB775240C042800F7E8F4 /* RectObject.m in Sources */,
 				237EDEAA240B257400F8A5FD /* AzureResponse.swift in Sources */,
 				233BB77A240C042800F7E8F4 /* RecognizerManager.m in Sources */,
+				234141A3240FCC13005E9E86 /* StringExtension.swift in Sources */,
 				237EDEA8240B1D8200F8A5FD /* MainViewController+Moya.swift in Sources */,
 				235A258224067699008AC47E /* MakeStrokesFromCoordinates.swift in Sources */,
 				233BB761240C041B00F7E8F4 /* Shortcut.m in Sources */,
@@ -651,6 +658,7 @@
 				230C466124059BE20029EB2B /* DrawingView+Touch.swift in Sources */,
 				233BB787240C043B00F7E8F4 /* WritePadInputView.m in Sources */,
 				236D5113240459B60098611E /* TestDataViewController.swift in Sources */,
+				234141A1240FC64C005E9E86 /* SmartpenDataParser.swift in Sources */,
 				233BB778240C042800F7E8F4 /* LanguageManager.m in Sources */,
 				23C71327240326FC00B8627F /* InitialViewController.swift in Sources */,
 				233BB788240C043B00F7E8F4 /* WritePadInputPanel.m in Sources */,

@@ -35,7 +35,7 @@ extension DrawingView{
             print(">>> USER TOUCHES STOPPED BEING REGISTERED")
         }
         
-        stateOfInput = .none
+        stoppedWriting()
         delegate?.inputEnded()
     }
     
