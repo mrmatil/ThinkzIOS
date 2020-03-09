@@ -57,4 +57,41 @@ class GrammarResponse{
         return warnings
     }
     
+    func getWarningsForTextGears(text:String) -> [GrammarResponseWarnings]?{
+        var warnings:[GrammarResponseWarnings] = [GrammarResponseWarnings]()
+
+        do{
+            let json = try JSON.init(data: jsonData)
+            let errors = json["errors"]
+            
+            if errors.count > 0 {
+                
+                for error in errors{
+                    let oneErrorJson = error.1
+                    let sentence = String(text.dropFirst())
+                    let message = oneErrorJson["type"].string
+                    var repl = Array<String>()
+                    
+                    for replacements in oneErrorJson["better"]{
+                        repl.append(replacements.1.string ?? "")
+                    }
+                    
+                    warnings.append(GrammarResponseWarnings.init(sentence: sentence,
+                                                                 message: message ?? "",
+                                                                 replacements: repl))
+                }
+                
+            }else{
+                return nil
+            }
+            
+        }
+        catch{
+            print(error.localizedDescription)
+            return nil
+        }
+    
+        return warnings
+    }
+    
 }

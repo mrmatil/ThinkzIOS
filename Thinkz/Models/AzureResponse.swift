@@ -8,6 +8,7 @@ import Foundation
 
 // MARK: - ErrorEnum
 enum AzureResponseErrors:Error{
+    
     case noFreeTry
 }
 

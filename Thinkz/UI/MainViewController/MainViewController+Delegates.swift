@@ -11,6 +11,12 @@ import Foundation
 //MARK: - Settings Delegate
 extension MainViewController:MainSettingsProtocol{
     
+    func grammarChanged(value: PickedGrammarRecignizer) {
+        print(">>> GRAMMAR PROVIDER CHANGED TO \(value)")
+        self.pickedGrammarRecignizer = value
+    }
+    
+    
     func apiChanged(value: PickedProvider) {
         print(">>> API PROVIDER CHANGED TO \(value)")
         self.pickedProvider = value

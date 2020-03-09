@@ -58,13 +58,13 @@ extension GrammarMistakesViewController :UITableViewDelegate,UITableViewDataSour
             
             for x in 0...5{
                 replacements.append(warnings[indexPath.row].replacements[x])
-                replacements.append(", ")
+                replacements.append(" ")
             }
             
         } else {
             for x in warnings[indexPath.row].replacements {
                 replacements.append(x)
-                replacements.append(", ")
+                replacements.append(" ")
             }
         }
         

@@ -14,6 +14,11 @@ enum PickedProvider {
     case Google
 }
 
+enum PickedGrammarRecignizer {
+    case textGears
+    case grammarbot
+}
+
 struct Results {
     var stringResult:String
     var warings:[GrammarResponseWarnings]?
@@ -23,6 +28,7 @@ struct Results {
 class MainViewController: UIViewController {
     
     internal var pickedProvider:PickedProvider!
+    internal var pickedGrammarRecignizer:PickedGrammarRecignizer = .textGears
     internal var results:[Results] = [Results(stringResult: "", warings: nil)]
     
     internal var manager:CBCentralManager!
@@ -37,6 +43,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         drawingView.delegate = self
         apiChanged(value: .Google)
+        grammarChanged(value: .grammarbot)
         changeTemporaryResultTextFieldText(text: "")
         setupTableView()
         initializeBlueToothConnection()
@@ -46,7 +53,7 @@ class MainViewController: UIViewController {
         if segue.identifier == SegueysNames.MathToSettings{
             let destination = segue.destination as! MainSettingsViewController
             destination.delegate = self
-            destination.setSettingsToCorrespondCurrendValues(currentProvider: pickedProvider)
+            destination.setSettingsToCorrespondCurrendValues(currentProvider: pickedProvider, currentGrammar: pickedGrammarRecignizer)
         }
     }
 }

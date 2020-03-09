@@ -82,7 +82,7 @@
             <objects>
                 <viewController id="3eA-Av-VJe" customClass="MainSettingsViewController" customModule="Thinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="So6-pL-bIH">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jIg-zk-6MZ">
@@ -106,17 +106,42 @@
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="881-rN-ADk">
+                                <rect key="frame" x="30" y="121" width="652" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE OF GRAMMAR RECOGNIZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukx-ro-FGB">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vjS-X0-60U">
+                                        <rect key="frame" x="330" y="0.0" width="322" height="32"/>
+                                        <segments>
+                                            <segment title="textGears"/>
+                                            <segment title="Grammar Bot"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="grammarSegmentedControlChanged:" destination="3eA-Av-VJe" eventType="valueChanged" id="iUI-Gh-Jfg"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jIg-zk-6MZ" firstAttribute="top" secondItem="Lrg-Ve-2KZ" secondAttribute="top" constant="40" id="DIc-6Q-bqX"/>
+                            <constraint firstItem="881-rN-ADk" firstAttribute="leading" secondItem="Lrg-Ve-2KZ" secondAttribute="leading" constant="30" id="MZH-Ff-fHo"/>
                             <constraint firstItem="Lrg-Ve-2KZ" firstAttribute="trailing" secondItem="jIg-zk-6MZ" secondAttribute="trailing" constant="30" id="aTV-Ef-Teo"/>
+                            <constraint firstItem="881-rN-ADk" firstAttribute="top" secondItem="jIg-zk-6MZ" secondAttribute="bottom" constant="50" id="fh3-KQ-2cc"/>
+                            <constraint firstItem="Lrg-Ve-2KZ" firstAttribute="trailing" secondItem="881-rN-ADk" secondAttribute="trailing" constant="30" id="p7d-BK-g8l"/>
                             <constraint firstItem="jIg-zk-6MZ" firstAttribute="leading" secondItem="Lrg-Ve-2KZ" secondAttribute="leading" constant="30" id="wpl-YQ-XE4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lrg-Ve-2KZ"/>
                     </view>
                     <connections>
                         <outlet property="apiSegmentedControl" destination="FT5-RV-IEa" id="4nd-Yn-eTK"/>
+                        <outlet property="grammarSegmentedControl" destination="vjS-X0-60U" id="CjH-61-iOF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpA-J0-MaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -106,14 +106,30 @@ extension MainViewController{
     func MoyaGrammarCheck(text:String, numberOfRow:Int){
         let provider = MoyaProvider<GrammarChecking>()
         
-        provider.request(.grammarbot(text: text)) { (response) in
-            switch response{
-            case .success(let succresp):
-                self.parseGrammarCheckData(jsonData: succresp.data, number: numberOfRow)
-            case .failure(let error):
-                print(error)
+        switch pickedGrammarRecignizer{
+            
+        case .grammarbot:
+            provider.request(.grammarbot(text: text)) { (response) in
+                switch response{
+                case .success(let succresp):
+                    self.parseGrammarCheckData(jsonData: succresp.data, number: numberOfRow)
+                case .failure(let error):
+                    print(error)
+                }
             }
+            
+        case .textGears:
+            provider.request(.textGears(text: text)) { (response) in
+                switch response{
+                case .success(let succresp):
+                    self.parseGrammarTextGearsCheckData(jsonData: succresp.data, number: numberOfRow, text: text)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            
         }
+        
 
     }
     
@@ -121,6 +137,13 @@ extension MainViewController{
 
         let response = GrammarResponse(jsonData: jsonData)
         let temp = response.getWarnings()
+        results[number].warings = temp
+        resultsTableView.reloadData()
+    }
+    
+    private func parseGrammarTextGearsCheckData(jsonData:Data, number:Int, text:String){
+        let response = GrammarResponse(jsonData: jsonData)
+        let temp = response.getWarningsForTextGears(text: text)
         results[number].warings = temp
         resultsTableView.reloadData()
     }
