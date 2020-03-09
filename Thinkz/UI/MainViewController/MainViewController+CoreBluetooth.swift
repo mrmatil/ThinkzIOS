@@ -11,7 +11,7 @@ import CoreBluetooth
 
 extension MainViewController:CBCentralManagerDelegate,CBPeripheralDelegate{
     
-    //MARK: Functions
+    //MARK: - Functions
     
     func initializeBlueToothConnection(){
         manager = CBCentralManager(delegate: self, queue: nil)
@@ -27,7 +27,7 @@ extension MainViewController:CBCentralManagerDelegate,CBPeripheralDelegate{
     }
 
     
-    //MARK: Delegate Functions
+    //MARK: - Delegate Functions
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             central.scanForPeripherals(withServices: nil, options: nil)

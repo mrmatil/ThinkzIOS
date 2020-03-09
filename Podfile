@@ -8,5 +8,6 @@ target 'Thinkz' do
   # Pods for Thinkz
   pod 'Moya', '~> 14.0'
   pod 'SwiftyJSON', '~> 4.0'
+  pod "MyScriptInteractiveInk-UIReferenceImplementation", :path => '/Users/mateuszlukasinski/Desktop/Thinkz'
 
 end

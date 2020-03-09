@@ -8,7 +8,7 @@
 
 import Foundation
 
-//MARK: Settings Delegate
+//MARK: - Settings Delegate
 extension MainViewController:MainSettingsProtocol{
     
     func apiChanged(value: PickedProvider) {
@@ -18,7 +18,7 @@ extension MainViewController:MainSettingsProtocol{
     
 }
 
-//MARK: Drawing View Delegate
+//MARK: - Drawing View Delegate
 extension MainViewController:DrawingViewDelegate{
     
     func inputEnded() {

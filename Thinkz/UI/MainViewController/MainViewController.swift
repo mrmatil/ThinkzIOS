@@ -14,11 +14,16 @@ enum PickedProvider {
     case Google
 }
 
+struct Results {
+    var stringResult:String
+    var warings:[GrammarResponseWarnings]?
+}
+
 //MARK: Variables & Main Functions
 class MainViewController: UIViewController {
     
     internal var pickedProvider:PickedProvider!
-    private var results:[String] = [""]
+    internal var results:[Results] = [Results(stringResult: "", warings: nil)]
     
     internal var manager:CBCentralManager!
     internal var peripheral:CBPeripheral!
@@ -68,12 +73,17 @@ extension MainViewController{
         }
     }
     
-    @IBAction func testBtnTapped(_ sender: UIButton) {
-        MoyaResponse()
+    @IBAction func newLineBtnTapped(_ sender: UIButton) {
+        MoyaGrammarCheck(text: results[results.count-1].stringResult, numberOfRow: results.count-1)
+        results.append(Results(stringResult: "", warings: nil))
+        drawingView.deleteCurrentCoordinates()
+        changeTemporaryResultTextFieldText(text: "")
+        resultsTableView.reloadData()
+        print(">>> NEW LINE BUTTON TAPPED")
     }
     
     @IBAction func nextBtnTapped(_ sender: UIButton) {
-        results[results.count-1] += " \(temporaryResultTextField.text ?? "")" 
+        results[results.count-1].stringResult += " \(temporaryResultTextField.text ?? "")"
         drawingView.deleteCurrentCoordinates()
         changeTemporaryResultTextFieldText(text: "")
         resultsTableView.reloadData()
@@ -101,8 +111,11 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
     func setupTableViewCell(indexPath:IndexPath)->UITableViewCell{
         let cell = UITableViewCell(style: .default, reuseIdentifier: "resultCell")
         cell.accessoryType = .none
-        cell.textLabel?.text = results[indexPath.row]
-        
+        cell.textLabel?.text = results[indexPath.row].stringResult
+        if results[indexPath.row].warings != nil {
+            cell.accessoryType = .detailDisclosureButton
+            print(results[indexPath.row])
+        }
         return cell
     }
     
@@ -115,6 +128,17 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
         return setupTableViewCell(indexPath: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if results[indexPath.row].warings != nil {
+            
+            let resultsVC = GrammarMistakesViewController()
+            resultsVC.modalPresentationStyle = .formSheet
+            resultsVC.warnings = results[indexPath.row].warings!
+            self.present(resultsVC, animated: true, completion: nil)
+        }
+
+        resultsTableView.deselectRow(at: indexPath, animated: false)
+    }
     
     
 }
