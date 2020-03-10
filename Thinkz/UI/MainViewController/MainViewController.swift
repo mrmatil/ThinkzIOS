@@ -33,6 +33,7 @@ class MainViewController: UIViewController {
     
     internal var manager:CBCentralManager!
     internal var peripheral:CBPeripheral!
+    internal var tempCoordinatesBluetooth:String = ""
     
     @IBOutlet weak var temporaryResultTextField: UITextField!
     @IBOutlet weak var resultsTableView: UITableView!

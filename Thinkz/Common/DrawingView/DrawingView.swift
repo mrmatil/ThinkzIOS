@@ -113,6 +113,14 @@ extension DrawingView{
         setNeedsDisplay()
     }
     
+    func changeCoordinatesForSmartpen(x:Double,y:Double)->(x:Double,y:Double){
+        
+        let a = x/Double(SmartPenConstants.maxWidth) * Double(Int(self.frame.width))
+        let b = y/Double(SmartPenConstants.maxHeight) * Double(Int(self.frame.height))
+        
+        return (a,b)
+    }
+    
     func deleteCurrentCoordinates(){
         lastKnownPosition = CGPoint(x: 0, y: 0)
         coordinates = Array<movement>()
