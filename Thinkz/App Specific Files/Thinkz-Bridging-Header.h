@@ -8,3 +8,7 @@
 #import "RecognizerManager.h"
 #import "WPTextView.h"
 #import "LetterShapesController.h"
+
+//#import <iink/IINK.h>
+//#import "MyCertificate.h"
+//#import <IInkUIReferenceImplementation/IInkUIReferenceImplementation.h>

@@ -27,13 +27,10 @@ class SmartpenDataParser{
         var isWriting = false
         
         var tempDataArray = data.split(separator: "/")
-        
-        if tempDataArray.count != 4 {
+        if tempDataArray.count != 3 {
             return (0.0,0.0,false)
         }
         
-        //Droping last value => last value is always an empty string
-        tempDataArray = tempDataArray.dropLast()
         
         if tempDataArray[0].contains("X:"){
             var temp = String(tempDataArray[0])

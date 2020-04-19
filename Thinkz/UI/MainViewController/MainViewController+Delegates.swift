@@ -8,8 +8,14 @@
 
 import Foundation
 
-//MARK: Settings Delegate
+//MARK: - Settings Delegate
 extension MainViewController:MainSettingsProtocol{
+    
+    func grammarChanged(value: PickedGrammarRecignizer) {
+        print(">>> GRAMMAR PROVIDER CHANGED TO \(value)")
+        self.pickedGrammarRecignizer = value
+    }
+    
     
     func apiChanged(value: PickedProvider) {
         print(">>> API PROVIDER CHANGED TO \(value)")
@@ -18,7 +24,7 @@ extension MainViewController:MainSettingsProtocol{
     
 }
 
-//MARK: Drawing View Delegate
+//MARK: - Drawing View Delegate
 extension MainViewController:DrawingViewDelegate{
     
     func inputEnded() {

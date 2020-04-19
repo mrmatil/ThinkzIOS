@@ -13,6 +13,8 @@ import SwiftyJSON
 
 extension MainViewController{
 
+    //MARK: - HandWriting Recognition
+    
     func MoyaResponse(){
         
         let provider = MoyaProvider<HandWritingRecognition>()
@@ -21,7 +23,7 @@ extension MainViewController{
         case .Azure:
             
             //MARK: Azure Request
-            provider.request(.recognizeFromStrokesAzure(language: .polish,
+            provider.request(.recognizeFromStrokesAzure(language: .english,
                                                         coordinates: drawingView.coordinates))
             { (response) in
                 
@@ -38,7 +40,7 @@ extension MainViewController{
             
             //MARK: Google Request
             
-            provider.request(.recognizeFromStrokesGoogle(language: .polish,
+            provider.request(.recognizeFromStrokesGoogle(language: .english,
                                                          coordinates: drawingView.coordinates,
                                                          area: drawingView.areaDimensions))
             { (response) in
@@ -98,5 +100,52 @@ extension MainViewController{
     }
     
     
+    
+    //MARK: - Grammar Checking
+    
+    func MoyaGrammarCheck(text:String, numberOfRow:Int){
+        let provider = MoyaProvider<GrammarChecking>()
+        
+        switch pickedGrammarRecignizer{
+            
+        case .grammarbot:
+            provider.request(.grammarbot(text: text)) { (response) in
+                switch response{
+                case .success(let succresp):
+                    self.parseGrammarCheckData(jsonData: succresp.data, number: numberOfRow)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            
+        case .textGears:
+            provider.request(.textGears(text: text)) { (response) in
+                switch response{
+                case .success(let succresp):
+                    self.parseGrammarTextGearsCheckData(jsonData: succresp.data, number: numberOfRow, text: text)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            
+        }
+        
+
+    }
+    
+    private func parseGrammarCheckData(jsonData:Data, number:Int){
+
+        let response = GrammarResponse(jsonData: jsonData)
+        let temp = response.getWarnings()
+        results[number].warings = temp
+        resultsTableView.reloadData()
+    }
+    
+    private func parseGrammarTextGearsCheckData(jsonData:Data, number:Int, text:String){
+        let response = GrammarResponse(jsonData: jsonData)
+        let temp = response.getWarningsForTextGears(text: text)
+        results[number].warings = temp
+        resultsTableView.reloadData()
+    }
     
 }
