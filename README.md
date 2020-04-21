@@ -4,6 +4,11 @@
 
 ##### App Author: Mateusz Łukasiński
 
+<a href="https://github.com/dancesWithMachines/Smartpen">
+  <b>Smartpen Code Repo by Mateusz Kusiak</b>
+  </a>
+
+
 ## Features:
 * connects to custom made smartpen via bluetooth and parses binary data to coordinates
 * shows user input from smartpen on mobile screen real time
